@@ -24,7 +24,7 @@ namespace IndustriaAgroalimentaria
                 productFresh.packDate = "19/01/2009";
                 productFresh.countOrigin = "México";
 
-                productFresh.productFresh();
+                productFresh.ProductFresh();
 
                 ////Objeto Producto Refrigerado
                 Refrigerated productRefrigerated = new Refrigerated();
@@ -36,7 +36,7 @@ namespace IndustriaAgroalimentaria
                 productRefrigerated.temp = 2.0;
                 productRefrigerated.orgCode = 222;
 
-                productRefrigerated.productRefrigerated();
+                productRefrigerated.ProductRefrigerated();
 
                 ////Objeto Producto Congelado
                 Frozen productFrozen = new Frozen();
@@ -47,7 +47,7 @@ namespace IndustriaAgroalimentaria
                 productFrozen.countOrigin = "China";
                 productFrozen.temp = -3.0;
 
-                productFrozen.productFrozen();
+                productFrozen.ProductFrozen();
 
 
                 //Objeto Producto Congelado por Agua
@@ -61,7 +61,7 @@ namespace IndustriaAgroalimentaria
 
                 productFwater.salinity = 5.2;
 
-                productFwater.productFWater();
+                productFwater.ProductFWater();
 
 
                 //Objeto Producto Congelado por Nitrogeno
@@ -76,7 +76,7 @@ namespace IndustriaAgroalimentaria
                 productFNitrogen.methodUsed = " Inmersion con Nitrogeno Liquido";
                 productFNitrogen.expoTime = 10;
 
-                productFNitrogen.productFNitrogen();
+                productFNitrogen.ProductFNitrogen();
 
 
                 //Objeto Producto Congelado por Aire
@@ -93,7 +93,7 @@ namespace IndustriaAgroalimentaria
                 productFAir.perOxigen = 43.4;
                 productFAir.perCO2 = 1.2;
 
-                productFAir.productFAir();
+                productFAir.ProductFAir();
 
 
             }
@@ -111,7 +111,7 @@ namespace IndustriaAgroalimentaria
 
         class Fresh : Products
         {
-            public void productFresh()
+            public void ProductFresh()
             {
                 Console.WriteLine(
                                    "Tipo de producto: " + typeProduct + "\n" +
@@ -129,7 +129,7 @@ namespace IndustriaAgroalimentaria
 
 
             public double temp { get; set; }
-            public void productFrozen()
+            public void ProductFrozen()
             {
                 Console.WriteLine(
                                    "Tipo de producto: " + typeProduct + "\n" +
@@ -147,7 +147,7 @@ namespace IndustriaAgroalimentaria
         {
             public double salinity { get; set; }
 
-            public void productFWater()
+            public void ProductFWater()
             {
                 Console.WriteLine(
                                    "Tipo de producto: " + typeProduct + "\n" +
@@ -170,7 +170,7 @@ namespace IndustriaAgroalimentaria
 
             public double expoTime { get; set; }
 
-            public void productFNitrogen()
+            public void ProductFNitrogen()
             {
                 Console.WriteLine(
                                    "Tipo de producto: " + typeProduct + "\n" +
@@ -194,7 +194,7 @@ namespace IndustriaAgroalimentaria
             public double perOxigen { get; set; }
             public double perCO2 { get; set; }
 
-            public void productFAir()
+            public void ProductFAir()
             {
                 Console.WriteLine(
                                    "Tipo de producto: " + typeProduct + "\n" +
@@ -218,7 +218,7 @@ namespace IndustriaAgroalimentaria
             public double temp { get; set; }
             public int orgCode { get; set; }
 
-            public void productRefrigerated()
+            public void ProductRefrigerated()
             {
                 Console.WriteLine(
                                    "Tipo de producto: " + typeProduct + "\n" +
