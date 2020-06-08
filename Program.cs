@@ -51,7 +51,7 @@ namespace IndustriaAgroalimentaria
 
 
                 //Objeto Producto Congelado por Agua
-                Fwater productFwater = new Fwater();
+                FWater productFwater = new FWater();
                 productFwater.typeProduct = "Producto Congelado";
                 productFwater.expDate = "19/04/2023";
                 productFwater.lotNum = 32;
@@ -61,11 +61,11 @@ namespace IndustriaAgroalimentaria
 
                 productFwater.salinity = 5.2;
 
-                productFwater.productFwater();
+                productFwater.productFWater();
 
 
                 //Objeto Producto Congelado por Nitrogeno
-                Fnitrogen productFNitrogen = new Fnitrogen();
+                FNitrogen productFNitrogen = new FNitrogen();
                 productFNitrogen.typeProduct = "Producto congelado";
                 productFNitrogen.expDate = "20/01/2010";
                 productFNitrogen.lotNum = 2;
@@ -76,11 +76,11 @@ namespace IndustriaAgroalimentaria
                 productFNitrogen.methodUsed = " Inmersion con Nitrogeno Liquido";
                 productFNitrogen.expoTime = 10;
 
-                productFNitrogen.productFnitrogen();
+                productFNitrogen.productFNitrogen();
 
 
                 //Objeto Producto Congelado por Aire
-                Fair productFAir = new Fair();
+                FAir productFAir = new FAir();
                 productFAir.typeProduct = "Producto Refrigerado";
                 productFAir.expDate = "21/10/2021";
                 productFAir.lotNum = 25;
@@ -93,7 +93,7 @@ namespace IndustriaAgroalimentaria
                 productFAir.perOxigen = 43.4;
                 productFAir.perCO2 = 1.2;
 
-                productFAir.productFair();
+                productFAir.productFAir();
 
 
             }
@@ -143,11 +143,11 @@ namespace IndustriaAgroalimentaria
             }
 
         }
-        class Fwater : Frozen
+        class FWater : Frozen
         {
             public double salinity { get; set; }
 
-            public void productFwater()
+            public void productFWater()
             {
                 Console.WriteLine(
                                    "Tipo de producto: " + typeProduct + "\n" +
@@ -164,13 +164,13 @@ namespace IndustriaAgroalimentaria
 
         }
 
-        class Fnitrogen : Frozen
+        class FNitrogen : Frozen
         {
             public string methodUsed { get; set; }
 
             public double expoTime { get; set; }
 
-            public void productFnitrogen()
+            public void productFNitrogen()
             {
                 Console.WriteLine(
                                    "Tipo de producto: " + typeProduct + "\n" +
@@ -187,14 +187,14 @@ namespace IndustriaAgroalimentaria
             }
         }
 
-        class Fair : Frozen
+        class FAir : Frozen
         {
             public double perNitro { get; set; }
             public double perVapor { get; set; }
             public double perOxigen { get; set; }
             public double perCO2 { get; set; }
 
-            public void productFair()
+            public void productFAir()
             {
                 Console.WriteLine(
                                    "Tipo de producto: " + typeProduct + "\n" +
